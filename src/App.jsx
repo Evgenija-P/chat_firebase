@@ -1,16 +1,19 @@
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router";
 
-// import { AuthProvider } from "../contexts/AuthContext"
-
-// import Chats from "./Chats"
+import { AuthProvider } from "./contexts/AuthContext";
+import { Chats } from "./components/Chats";
 import { Login } from "./components/Login";
 
 function App() {
   return (
     <div className="font-basic">
-      <Routes>
-        <Route path="/" element={<Login />} />
-      </Routes>
+      <AuthProvider>
+        <Switch>
+          <Route path="/chats" element={<Chats />} />
+          <Route path="/" element={<Login />} />{" "}
+        </Switch>
+      </AuthProvider>
     </div>
   );
 }

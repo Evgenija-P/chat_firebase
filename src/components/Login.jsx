@@ -1,8 +1,7 @@
 import { GoogleOutlined, FacebookOutlined } from "@ant-design/icons";
-// import "firebase/app";
-
-import firebase from "firebase/app";
 import { auth } from "../firebase";
+
+import { GoogleAuthProvider, signInWithRedirect, FacebookAuthProvider } from "firebase/auth";
 
 export const Login = () => {
   return (
@@ -13,13 +12,16 @@ export const Login = () => {
           <li className="w-[280px] mx-auto">
             <button
               className="w-full flex gap-x-3 items-center justify-center bg-[rgb(66,133,244)] py-3 px-5 rounded-lg text-white text-lx font-semibold mb-5 hover:shadow-buttonLoginGoogle"
-              onClick={() => auth.singInWithRedirect(new firebase.auth.GoogleAuthProvider())}
+              onClick={() => signInWithRedirect(auth, new GoogleAuthProvider())}
             >
               <GoogleOutlined /> Sing In wiht Google
             </button>
           </li>
           <li className="w-[280px] mx-auto">
-            <button className="w-full flex gap-x-3 items-center justify-center bg-[rgb(59,89,152)] py-3 px-5 rounded-lg text-white text-lx font-semibold hover:shadow-buttonLoginFacebook">
+            <button
+              className="w-full flex gap-x-3 items-center justify-center bg-[rgb(59,89,152)] py-3 px-5 rounded-lg text-white text-lx font-semibold hover:shadow-buttonLoginFacebook"
+              onClick={() => signInWithRedirect(auth, new FacebookAuthProvider())}
+            >
               <FacebookOutlined /> Sign In with Facebook
             </button>
           </li>
