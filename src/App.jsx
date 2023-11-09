@@ -1,5 +1,5 @@
 // import { Routes, Route, Switch } from "react-router-dom";
-import { Route, Switch } from "react-router";
+import { Route, Routes } from "react-router";
 
 import { AuthProvider } from "./contexts/AuthContext";
 import { Chats } from "./components/Chats";
@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="font-basic">
       <AuthProvider>
-        <Switch>
+        <Routes>
           <Route path="/chats" element={<Chats />} />
-          <Route path="/" element={<Login />} />{" "}
-        </Switch>
+          <Route path="/" element={<Login />} />
+        </Routes>
       </AuthProvider>
     </div>
   );
