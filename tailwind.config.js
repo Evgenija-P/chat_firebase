@@ -31,7 +31,7 @@ export default {
         login: "0px 2px 19px 0px rgba(59,89,152,0.68)",
       },
       backgroundImage: {
-        login: "url('/public/images/login_background.jpg')",
+        login: "url('/images/login_background.jpg')",
       },
     },
   },

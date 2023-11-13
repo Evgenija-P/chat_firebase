@@ -9,9 +9,9 @@ const firebaseConfig = {
   authDomain: "chat-ddc80.firebaseapp.com",
   projectId: "chat-ddc80",
   storageBucket: "chat-ddc80.appspot.com",
-  messagingSenderId: import.meta.env.VITE_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
+  messagingSenderId: "486150724952",
+  appId: "1:486150724952:web:a1ef59197d74efdb5e992d",
+  measurementId: "G-C545Q5FBW0",
 };
 
 const app = initializeApp(firebaseConfig);

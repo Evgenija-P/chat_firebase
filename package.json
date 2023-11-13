@@ -35,7 +35,9 @@
       "API_KEY",
       "SENDER_ID",
       "APP_ID",
-      "MEASUREMENT_ID"
+      "MEASUREMENT_ID",
+      "PROJECT_ID",
+      "PRIVATE_KEY"
     ]
   }
 }
